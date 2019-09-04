@@ -1,4 +1,4 @@
-# .restorefiles
+# My Dotfiles
 
 # install
 ```
