@@ -36,10 +36,7 @@ function usage() {
 
 function plistchange() {
   echo "[INFO]plist Change"
-  read -e -p "Please enter the HOSTNAME:" HOSTNAME
   # GeneralSetting
-  sudo scutil --set ComputerName $HOSTNAME && \
-    sudo scutil --set LocalHostName $HOSTNAME
   sudo pmset -a standbydelay 86400
   sudo nvram SystemAudioVolume=" "
   sudo systemsetup -setrestartfreeze on
@@ -98,11 +95,6 @@ function install() {
 
     echo "[INFO]APP INSTALL"
     brew tap Homebrew/bundle
-    brew bundle --file=~/Brewfile && \
-      rm -f Brewfile
-    curl http://magicprefs.com/MagicPrefs.app.zip -o /tmp/MagicPrefs.app.zip && \
-      unzip /tmp/MagicPrefs.app.zip -d /Applications && \
-      rm -rf /tmp/MagicPrefs.app.zip
 
     echo "[INFO]COLORSCHEME DOWNLOAD"
     mkdir ~/scheme && \
