@@ -7,6 +7,9 @@ export PATH=/usr/local/bin:/usr/local/opt/inetutils/libexec/gnubin:/bin:/usr/loc
 ## Editor
 export EDITOR=vim
 
+## AWS
+export AWS_PROFILE=saml
+
 # 外部プラグイン(zplug)
 ## global setting
 export ZPLUG_HOME=/usr/local/opt/zplug
