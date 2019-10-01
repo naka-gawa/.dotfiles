@@ -8,3 +8,7 @@ install:
 
 clean:
 	/bin/bash ./setup.sh clean
+
+zshadd:
+	/bin/cp -i ./zsh/.zshrc ~/.zshrc
+	exec $SHELL -l
