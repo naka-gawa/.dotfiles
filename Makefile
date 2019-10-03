@@ -9,6 +9,9 @@ install:
 clean:
 	/bin/bash ./setup.sh clean
 
-zshadd:
+zshchange:
 	/bin/cp -i ./zsh/.zshrc ~/.zshrc
-	exec $SHELL -l
+
+tmuxchange:
+	/bin/cp -i ./tmux/.tmux.conf ~/.tmux.conf
+
