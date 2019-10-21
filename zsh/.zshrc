@@ -9,6 +9,7 @@ export EDITOR=vim
 
 ## AWS
 export AWS_PROFILE=saml
+export AWS_REGION=ap-northeast-1
 
 # 外部プラグイン(zplug)
 ## global setting
