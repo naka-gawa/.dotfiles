@@ -415,6 +415,7 @@ case ${OSTYPE} in
       export PATH=$PATH:/usr/local/go/bin
       export PATH=$PATH:$(go env GOPATH)/bin
       eval "$(anyenv init -)"
+      eval "$(rbenv init -)"
       ;;
     linux*)
       # terraform
