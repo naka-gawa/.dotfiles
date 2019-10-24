@@ -9,9 +9,11 @@ install:
 clean:
 	/bin/bash ./setup.sh clean
 
-zshchange:
+zshrcchange:
 	/bin/cp -i ./zsh/.zshrc ~/.zshrc
 
 tmuxchange:
 	/bin/cp -i ./tmux/.tmux.conf ~/.tmux.conf
 
+vimrcchange:
+	/bin/cp -i ./vim/.vimrc ~/.vimrc

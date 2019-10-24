@@ -1,8 +1,6 @@
 map /  <Plug>(incsearch-forward)
 map s <Plug>(easymotion-overwin-f2)
 nnoremap <ESC><ESC> :nohlsearch<CR>
-nnoremap h :bp<CR>
-nnoremap l :bn<CR>
 nnoremap j gj
 nnoremap k gk
 " set list listchars=tab:\>\-
