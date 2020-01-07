@@ -1,11 +1,16 @@
 name: CI
 
-on: push
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
 
 jobs:
   test:
     name: Test
     runs-on: macos-latest
+    if: github.event.pull_request.merged == true
     steps:
     - name: Checkout code
       uses: actions/checkout@master
