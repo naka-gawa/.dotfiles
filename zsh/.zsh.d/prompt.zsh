@@ -31,11 +31,11 @@
 
   if is_osx ; then
     reset_tmout() {
-      export TMOUT=1
+      export TMOUT=10
     }
   else
     reset_tmout() {
-      export TMOUT=1
+      export TMOUT=10
     }
   fi
 
