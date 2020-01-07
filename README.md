@@ -5,4 +5,3 @@ My beloved dotfiles. 😍😍😍
 
 ## Loading order
 
-## tree
