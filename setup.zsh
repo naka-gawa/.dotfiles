@@ -12,10 +12,6 @@
     FILENAME=$(basename $FILE)
     echo load $FILENAME ...
     ln -s $DOTPATH/zsh/.zsh.d/$FILENAME ~/.zsh.d/$FILENAME
-    if $?; then
-      echo $FILENAME load success!!
-    else
-      echo $FILENAME load fail!!
     fi
   done
 }
