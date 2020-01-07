@@ -12,7 +12,6 @@
   # 改行のない出力をプロンプトで上書きするのを防ぐ
   unsetopt promptcr
   getExpireTime
-  PROMPT='$TIMER'
 
   # プロンプトの設定
   if [ "$(uname)" = 'Darwin' ]; then
