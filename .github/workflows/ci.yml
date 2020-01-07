@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: push
 
 jobs:
   test:
@@ -10,6 +10,4 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@master
     - name: Test setup scripts
-      run: ./setup
-    - name: Run shellcheck
-      run: ./script/ci
+      run: make install
