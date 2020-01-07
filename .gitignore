@@ -5,14 +5,10 @@
 
 # "無視したくないファイル"は以下に"![ファイル名]"で指定
 ##### Gitで管理するファイルリスト #####
-!/.vimrc
-!/.vim
 !/.gitignore
-!/.gitconfig
-!/.tmux.conf
-!/.zshrc
-!/.zshenv
+!/.zsh/.zshrc
+!/.zsh/.zshenv
 !/.zsh.d
-!/Brewfile
+!/setup.zsh
 
 # 上記に"無視したくないファイル"としてリスト化した中から、さらに"無視したいファイル"を指定
