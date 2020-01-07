@@ -10,7 +10,6 @@ jobs:
     runs-on: macos-latest
     if: github.event.pull_request.merged == true
     steps:
-    - name: Checkout code
-      uses: actions/checkout@master
+    - uses: actions/checkout@v1
     - name: Test setup scripts
       run: make install
