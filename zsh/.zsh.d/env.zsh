@@ -25,8 +25,8 @@
 
 : 'env vars for path' && {
   export PATH=/usr/local/opt/inetutils/libexec/gnubin:${PATH}
-  export PATH=$(go env GOPATH)/bin:${PATH}
-}
+  export PATH="$(go env GOPATH)/bin:${PATH}
+"}
 
 : 'env vars for editor' && {
   export EDITOR=vim
