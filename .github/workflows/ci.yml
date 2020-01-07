@@ -17,6 +17,7 @@ jobs:
     name: Lint dotfiles
     runs-on: macos-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Install shellcheck
       run: brew install shellcheck
     - name: Install shellcheck
