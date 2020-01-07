@@ -12,6 +12,5 @@
     FILENAME=$(basename $FILE)
     echo load $FILENAME ...
     ln -s $DOTPATH/zsh/.zsh.d/$FILENAME ~/.zsh.d/$FILENAME
-    fi
   done
 }
