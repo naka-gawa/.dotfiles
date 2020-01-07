@@ -1,5 +1,5 @@
 : 'Load myfunction files.' && {
-  source ./.zsh.d/utils.zsh
+  source $HOME/.zsh.d/utils.zsh
 }
 
 : 'Load zplugin files' && {
