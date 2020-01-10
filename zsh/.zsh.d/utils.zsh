@@ -53,7 +53,7 @@ is_linux() {
   fi
 }
 
-getExpireTime(){
+function getExpireTime(){
   TIME=$( grep x_security_token_expires ~/.aws/credentials | awk -F "=" '{print $2}' | sed "s/ //g")
   EXPIRE=$(( $(gdate -d $TIME +%s) - $(date +%s) ))
   H=$(( $EXPIRE % 86400 / 3600 ))
@@ -70,3 +70,10 @@ getExpireTime(){
     export TIMER=$COLOR$(printf "%.2d:%.2d:%.2d" $H $M $S)"%f"
   fi
 }
+
+function s2a(){
+  SESSIONTIMER=$((${1:-"1"}*60*60))
+  export AWS_PROFILE=saml
+  saml2aws login --skip-prompt --force --session-duration=$SESSIONTIMER
+}
+
