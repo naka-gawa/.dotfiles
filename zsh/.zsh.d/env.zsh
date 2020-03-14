@@ -43,3 +43,6 @@
   # 単語の区切り文字を指定する
   export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 }
+: 'init rbenv' && {
+  eval "$(rbenv init -)"
+}

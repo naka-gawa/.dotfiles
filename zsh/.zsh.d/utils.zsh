@@ -77,3 +77,11 @@ function s2a(){
   saml2aws login --skip-prompt --force --session-duration=$SESSIONTIMER
 }
 
+function lssh () {
+  IP=$(lsec2 $@ --region ap-northeast-1| peco | awk -F "\t" '{print $2}')
+  if [ $? -eq 0 -a "${IP}" != "" ]
+  then
+    echo ">>> SSH to ${IP}"
+    ssh ${IP}
+  fi
+}
