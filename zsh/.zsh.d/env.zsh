@@ -1,5 +1,7 @@
 : 'env vars for global' && {
   export DOTZSH_HOME=${HOME}/zsh
+  export AWS_PROFILE=saml
+  export AWS_DEFAULT_REGION=ap-northeast-1
 }
 
 : 'env vars for zplug' && {
@@ -11,8 +13,14 @@
 
 : 'env vars for history' && {
   export HISTFILE=${HOME}/.zsh_history
-  export HISTSIZE=1000
-  export SAVEHIST=100000
+  export HISTSIZE=10000000
+  export SAVEHIST=10000000
+  setopt HIST_IGNORE_DUPS
+  setopt HIST_IGNORE_ALL_DUPS
+  setopt HIST_IGNORE_SPACE
+  setopt HIST_FIND_NO_DUPS
+  setopt HIST_REDUCE_BLANKS
+  setopt HIST_NO_STORE
 }
 
 : 'env vars for locale & timezone' && {
@@ -26,6 +34,7 @@
 : 'env vars for path' && {
   export PATH=/usr/local/opt/inetutils/libexec/gnubin:${PATH}
   export PATH="$(go env GOPATH)/bin:${PATH}"
+  export PATH=/usr/local/opt/gnu-getopt/bin:${PATH}
 }
 
 : 'env vars for editor' && {
@@ -45,4 +54,12 @@
 }
 : 'init rbenv' && {
   eval "$(rbenv init -)"
+}
+
+: 'env for other' && {
+  export GOPATH=${HOME}/go
+  export PATH=$PATH:/usr/local/kubebuilder/bin
+  export GO111MODULE=on
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 }
