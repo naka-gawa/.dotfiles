@@ -1,7 +1,7 @@
 : 'env vars for global' && {
   export DOTZSH_HOME=${HOME}/zsh
   export AWS_PROFILE=saml
-
+  export AWS_DEFAULT_REGION=ap-northeast-1
 }
 
 : 'env vars for zplug' && {
