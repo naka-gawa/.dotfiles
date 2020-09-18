@@ -17,6 +17,7 @@
 !/zsh/.zsh.d/prompt.zsh
 !/zsh/.zsh.d/utils.zsh
 !/zsh/.zsh.d/zplugin.zsh
+!/tmux
 !/tmux/.tmux.conf
 !/tmux/.tmux/awsaccount.tmux
 !/tmux/.tmux/kube.tmux
