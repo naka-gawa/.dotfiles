@@ -17,6 +17,9 @@
 !/zsh/.zsh.d/prompt.zsh
 !/zsh/.zsh.d/utils.zsh
 !/zsh/.zsh.d/zplugin.zsh
+!/tmux/.tmux.conf
+!/tmux/.tmux/awsaccount.tmux
+!/tmux/.tmux/kube.tmux
 !/setup.zsh
 !/README.md
 !/PULL_REQUEST_TEMPLATE.md
