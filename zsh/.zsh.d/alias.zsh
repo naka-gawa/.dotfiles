@@ -51,9 +51,9 @@
 
 : 'Alias for git' && {
   if (($+commands[git])); then
-    abbrev-alias ga='git add'
-    abbrev-alias gc='git commit -m'
-    abbrev-alias gp='git push'
+    alias ga='git add'
+    alias gc='git commit -m'
+    alias gp='git push'
   fi
 }
 

@@ -71,9 +71,8 @@ function getExpireTime(){
   fi
 }
 
-function s2a(){
-  SESSIONTIMER=$((${1:-"1"}*60*60))
-  export AWS_PROFILE=saml
+function sta(){
+  SESSIONTIMER=$((${1:-"3"}*60*60))
   saml2aws login --skip-prompt --force --session-duration=$SESSIONTIMER
 }
 
@@ -84,4 +83,17 @@ function lssh () {
     echo ">>> SSH to ${IP}"
     ssh ${IP}
   fi
+}
+
+function peco-history-selection() {
+  BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
+}
+
+function ts() {
+  tmux split-window -h
+  tmux split-window -v
+  tmux resize-pane -D 15
+  tmux select-pane -t 1
 }

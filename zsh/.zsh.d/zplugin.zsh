@@ -29,4 +29,7 @@
 
   # Find and display frequently used displays
   zplugin load rupa/z
+
+  # Powerlevel10k
+  zplugin ice depth=1; zplugin light romkatv/powerlevel10k
 }
