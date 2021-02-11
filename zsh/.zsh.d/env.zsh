@@ -62,4 +62,5 @@
   export GO111MODULE=on
   export PATH=$HOME/.nodebrew/current/bin:$PATH
   export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+  export PATH="/usr/local/opt/openjdk/bin:$PATH"
 }

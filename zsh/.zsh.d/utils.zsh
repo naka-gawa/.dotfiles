@@ -77,7 +77,7 @@ function sta(){
 }
 
 function lssh () {
-  IP=$(lsec2 $@ --region ap-northeast-1| peco | awk -F "\t" '{print $2}')
+  IP=$(lsec2 $@ | peco | awk -F "\t" '{print $2}')
   if [ $? -eq 0 -a "${IP}" != "" ]
   then
     echo ">>> SSH to ${IP}"
@@ -96,4 +96,21 @@ function ts() {
   tmux split-window -v
   tmux resize-pane -D 15
   tmux select-pane -t 1
+}
+
+function login_clusterops() {
+  cd ${HOME}/.github.com/clusterops
+	docker run -it --rm \
+		-v ${HOME}/.aws:/root/.aws \
+		-v ${PWD}:/root/clusterops \
+    -e AWS_PROFILE="saml" \
+		-e EDITOR="vi" \
+		clusterops bash
+}
+
+function load_dev() {
+  if is_osx; then
+    source $(brew --prefix asdf)/asdf.sh
+    D
+  fi
 }
