@@ -39,6 +39,10 @@ fi
   source $HOME/.zsh.d/alias.zsh
 }
 
+: "Load develop file." && {
+  source $HOME/.zsh.d/develop.zsh
+}
+
 : "Load mykeybind files." && {
   source $HOME/.zsh.d/mykeybind.zsh
 }

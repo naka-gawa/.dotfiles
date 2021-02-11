@@ -49,6 +49,10 @@
   fi
 }
 
+: 'Alias for aws' && {
+  alias lsec2='lsec2 --region=ap-northeast-1'
+}
+
 : 'Alias for git' && {
   if (($+commands[git])); then
     alias ga='git add'
@@ -60,9 +64,8 @@
 : 'Alias for kubernetes config' && {
   if (($+commands[kubectl])); then
     alias k='kubectl'
-    alias ka='kubectl apply'
-    alias kd='kubectl delete'
-    alias kcr='export KUBECONFIG="$HOME/.kube-raspi/config"'
+    alias kc='kubectx'
+    alias kn='kubens'
   fi
 }
 
